@@ -15,7 +15,8 @@ public class ModPotions {
             DeferredRegister.create(ForgeRegistries.POTIONS, AlchemicalExpansion.MOD_ID);
 
     public static final RegistryObject<Potion> SPIDERS_CLIMB_POTION = POTIONS.register("spiders_climb_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.SPIDERS_CLIMB_EFFECT.getHolder().get(), 600, 0)));
+            () -> new Potion(new MobEffectInstance(ModEffects.SPIDERS_CLIMB_EFFECT.getHolder().get(), 600, 0),
+                    (new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,100, 0, false, false, true))));
 
     public static void register(IEventBus modEventBus) {
         POTIONS.register(modEventBus);

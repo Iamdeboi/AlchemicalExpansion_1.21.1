@@ -17,13 +17,6 @@ public class SpidersClimbEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        // Slowing Effect
-        if (!pLivingEntity.getPersistentData().getBoolean("SpidersClimbApplied")) {
-            int slowDuration = 200/(1 + pAmplifier);
-            pLivingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, slowDuration, 0, false, false, true));
-
-            pLivingEntity.getPersistentData().putBoolean("SpidersClimbApplied", true);
-        }
 
         // Climbing Effect which activates when in horizontal contact with a surface (wall climbing!)
         if (pLivingEntity.horizontalCollision) {
@@ -41,12 +34,5 @@ public class SpidersClimbEffect extends MobEffect {
         return true;
     }
 
-
-    @Override
-    public void removeAttributeModifiers(AttributeMap pAttributeMap) {
-        // Reset the custom slowing effect when the potion effect expires
-        super.removeAttributeModifiers(pAttributeMap);
-
-    }
 }
 
