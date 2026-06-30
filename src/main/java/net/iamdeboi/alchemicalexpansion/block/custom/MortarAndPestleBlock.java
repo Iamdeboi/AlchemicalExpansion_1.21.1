@@ -2,12 +2,16 @@ package net.iamdeboi.alchemicalexpansion.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.iamdeboi.alchemicalexpansion.block.entity.ModBlockEntities;
-import net.iamdeboi.alchemicalexpansion.block.entity.MortarAndPestleBlockEntity;
+import net.iamdeboi.alchemicalexpansion.block.entity.custom.MortarAndPestleBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -24,6 +28,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class MortarAndPestleBlock extends BaseEntityBlock {
     public static final VoxelShape SHAPE = Block.box(0,0,0,16,3,16);
+    public static final MapCodec<MortarAndPestleBlock> CODEC = simpleCodec(MortarAndPestleBlock::new);
 
     public MortarAndPestleBlock(Properties pProperties) {
         super(pProperties);
@@ -31,7 +36,7 @@ public class MortarAndPestleBlock extends BaseEntityBlock {
 
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
-        return null;
+        return CODEC;
     }
 
     @Override
@@ -48,8 +53,8 @@ public class MortarAndPestleBlock extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof MortarAndPestleBlockEntity) {
-                ((MortarAndPestleBlockEntity) blockEntity).drops();
+            if(blockEntity instanceof MortarAndPestleBlockEntity mortarAndPestleBlockEntity) {
+                mortarAndPestleBlockEntity.drops();
             }
         }
 
@@ -57,18 +62,18 @@ public class MortarAndPestleBlock extends BaseEntityBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        if (!pLevel.isClientSide()) {
+    protected ItemInteractionResult useItemOn(ItemStack pStack, BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+        if (!pLevel.isClientSide) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof MortarAndPestleBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (MortarAndPestleBlockEntity)blockEntity, pPos);
+            if(blockEntity instanceof MortarAndPestleBlockEntity mortarAndPestleBlockEntity) {
+                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(mortarAndPestleBlockEntity, Component.literal("Mortar and Pestle")), pPos);
             }
             else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
         }
 
-        return InteractionResult.sidedSuccess(pLevel.isClientSide());
+        return ItemInteractionResult.sidedSuccess(pLevel.isClientSide());
     }
 
     @Override
@@ -78,7 +83,7 @@ public class MortarAndPestleBlock extends BaseEntityBlock {
         }
 
         return createTickerHelper(pBlockEntityType, ModBlockEntities.MORTAR_AND_PESTLE_BE.get(),
-                (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1,pPos,pState1));
+                (level, blockPos, blockState, mortarAndPestleBlockEntity) -> mortarAndPestleBlockEntity.tick(level, blockPos, blockState));
     }
 
     @Override

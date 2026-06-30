@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class MortarAndPestleScreen extends AbstractContainerScreen<MortarAndPestleMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(AlchemicalExpansion.MODID, "textures/gui/mortar_and_pestle_block_gui.png");
+            ResourceLocation.fromNamespaceAndPath(AlchemicalExpansion.MOD_ID, "textures/gui/mortar_and_pestle_block_gui.png");
 
     public MortarAndPestleScreen(MortarAndPestleMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
@@ -45,7 +45,6 @@ public class MortarAndPestleScreen extends AbstractContainerScreen<MortarAndPest
 
     @Override
     public void render(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
-        renderBackground(pGuiGraphics);
         super.render(pGuiGraphics, pMouseX, pMouseY, pPartialTick);
         renderTooltip(pGuiGraphics, pMouseX, pMouseY);
     }

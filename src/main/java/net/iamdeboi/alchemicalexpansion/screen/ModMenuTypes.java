@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModMenuTypes  {
     public static final DeferredRegister<MenuType<?>> MENUS =
-            DeferredRegister.create(ForgeRegistries.MENU_TYPES, AlchemicalExpansion.MODID);
+            DeferredRegister.create(ForgeRegistries.MENU_TYPES, AlchemicalExpansion.MOD_ID);
 
     public static final RegistryObject<MenuType<MortarAndPestleMenu>> MORTAR_AND_PESTLE_MENU =
             registerMenuType("mortar_and_pestle_menu", MortarAndPestleMenu::new);

@@ -1,8 +1,7 @@
 package net.iamdeboi.alchemicalexpansion.screen;
 
 import net.iamdeboi.alchemicalexpansion.block.ModBlocks;
-import net.iamdeboi.alchemicalexpansion.block.custom.MortarAndPestleBlock;
-import net.iamdeboi.alchemicalexpansion.block.entity.MortarAndPestleBlockEntity;
+import net.iamdeboi.alchemicalexpansion.block.entity.custom.MortarAndPestleBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +11,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
-import org.jetbrains.annotations.Nullable;
 
 public class MortarAndPestleMenu extends AbstractContainerMenu {
     public final MortarAndPestleBlockEntity blockEntity;

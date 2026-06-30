@@ -1,47 +1,41 @@
 package net.iamdeboi.alchemicalexpansion.recipe;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import net.iamdeboi.alchemicalexpansion.AlchemicalExpansion;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.GsonHelper;
-import net.minecraft.world.SimpleContainer;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
 
-public class MortarAndPestleGrindingRecipe implements Recipe<SimpleContainer> {
-    private final NonNullList<Ingredient> inputItems;
-    private final ItemStack output;
-    private final ResourceLocation id;
-
-    public MortarAndPestleGrindingRecipe(NonNullList<Ingredient> inputItems, ItemStack output, ResourceLocation id) {
-        this.inputItems = inputItems;
-        this.output = output;
-        this.id = id;
+public record MortarAndPestleGrindingRecipe(Ingredient inputItem, ItemStack output) implements Recipe<MortarAndPestleGrindingRecipeInput> {
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        NonNullList<Ingredient> list = NonNullList.create();
+        list.add(inputItem);
+        return list;
     }
 
+    // read in JSON File --> turns into new GrowthChamberRecipe
 
     @Override
-    public boolean matches(SimpleContainer pContainer, Level pLevel) {
-        if(pLevel.isClientSide()){
+    public boolean matches(MortarAndPestleGrindingRecipeInput pInput, Level pLevel) {
+        if(pLevel.isClientSide()) {
             return false;
         }
 
-        return inputItems.get(0).test(pContainer.getItem(0));
+        return inputItem.test(pInput.getItem(0));
     }
 
-    @Override
-    public NonNullList<Ingredient> getIngredients() {
-        return inputItems;
-    }
+    // read in JSON File --> tunrns into new MortarAndPestleGrindingRecipe
 
     @Override
-    public ItemStack assemble(SimpleContainer pContainer, RegistryAccess pRegistryAccess) {
+    public ItemStack assemble(MortarAndPestleGrindingRecipeInput pInput, HolderLookup.Provider pRegistries) {
         return output.copy();
     }
 
@@ -51,69 +45,40 @@ public class MortarAndPestleGrindingRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack getResultItem(RegistryAccess pRegistryAccess) {
-        return output.copy();
-    }
-
-    @Override
-    public ResourceLocation getId() {
-        return id;
+    public ItemStack getResultItem(HolderLookup.Provider pRegistries) {
+        return output;
     }
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return Serializer.INSTANCE;
+        return ModRecipes.MORTAR_AND_PESTLE_GRINDING_SERIALIZER.get();
     }
 
     @Override
     public RecipeType<?> getType() {
-        return Type.INSTANCE;
-    }
-
-    public static class Type implements RecipeType<MortarAndPestleGrindingRecipe> {
-        public static final Type INSTANCE = new Type();
-        public static final String ID = "mortar_and_pestle_grinding";
+        return ModRecipes.MORTAR_AND_PESTLE_TYPE.get();
     }
 
     public static class Serializer implements RecipeSerializer<MortarAndPestleGrindingRecipe> {
-        public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(AlchemicalExpansion.MODID, "mortar_and_pestle_grinding");
+        public static final MapCodec<MortarAndPestleGrindingRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(MortarAndPestleGrindingRecipe::inputItem),
+                ItemStack.CODEC.fieldOf("result").forGetter(MortarAndPestleGrindingRecipe::output)
+        ).apply(inst, MortarAndPestleGrindingRecipe::new));
+
+        public static final StreamCodec<RegistryFriendlyByteBuf, MortarAndPestleGrindingRecipe> STREAM_CODEC =
+                StreamCodec.composite(
+                        Ingredient.CONTENTS_STREAM_CODEC, MortarAndPestleGrindingRecipe::inputItem,
+                        ItemStack.STREAM_CODEC, MortarAndPestleGrindingRecipe::output,
+                        MortarAndPestleGrindingRecipe::new);
 
         @Override
-        public MortarAndPestleGrindingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
-            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "output"));
-
-            JsonArray ingredients = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
-            NonNullList<Ingredient> inputs = NonNullList.withSize(1, Ingredient.EMPTY);
-
-            for(int i = 0; i < ingredients.size(); ++i) {
-                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
-            }
-
-            return new  MortarAndPestleGrindingRecipe(inputs, output, pRecipeId);
+        public MapCodec<MortarAndPestleGrindingRecipe> codec() {
+            return CODEC;
         }
 
         @Override
-        public @Nullable MortarAndPestleGrindingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
-            NonNullList<Ingredient> inputs = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
-
-            for(int i = 0; i < inputs.size(); ++i) {
-                inputs.set(i, Ingredient.fromNetwork(pBuffer));
-            }
-
-            ItemStack output = pBuffer.readItem();
-            return new MortarAndPestleGrindingRecipe(inputs, output, pRecipeId);
-        }
-
-        @Override
-        public void toNetwork(FriendlyByteBuf pBuffer, MortarAndPestleGrindingRecipe pRecipe) {
-            pBuffer.writeInt(pRecipe.inputItems.size());
-
-            for (Ingredient ingredient : pRecipe.getIngredients()) {
-                ingredient.toNetwork(pBuffer);
-            }
-
-            pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
+        public StreamCodec<RegistryFriendlyByteBuf, MortarAndPestleGrindingRecipe> streamCodec() {
+            return STREAM_CODEC;
         }
     }
 }

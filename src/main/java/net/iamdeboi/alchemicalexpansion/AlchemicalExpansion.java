@@ -1,6 +1,16 @@
 package net.iamdeboi.alchemicalexpansion;
 
 import com.mojang.logging.LogUtils;
+import net.iamdeboi.alchemicalexpansion.block.ModBlocks;
+import net.iamdeboi.alchemicalexpansion.block.entity.ModBlockEntities;
+import net.iamdeboi.alchemicalexpansion.effect.ModEffects;
+import net.iamdeboi.alchemicalexpansion.item.ModCreativeModeTabs;
+import net.iamdeboi.alchemicalexpansion.item.ModItems;
+import net.iamdeboi.alchemicalexpansion.potion.ModPotions;
+import net.iamdeboi.alchemicalexpansion.recipe.ModRecipes;
+import net.iamdeboi.alchemicalexpansion.screen.ModMenuTypes;
+import net.iamdeboi.alchemicalexpansion.screen.MortarAndPestleScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -23,9 +33,32 @@ public class AlchemicalExpansion {
     public AlchemicalExpansion() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
 
+        //Register Creative Mode Tab for the mod
+        ModCreativeModeTabs.register(modEventBus);
+
+        // Register ModItem Registry
+        ModItems.register(modEventBus);
+        // Register ModBlocks Registry
+        ModBlocks.register(modEventBus);
+
+        // Register ModBlockEntities Registry
+        ModBlockEntities.register(modEventBus);
+
+        // Register ModMenu Registry
+        ModMenuTypes.register(modEventBus);
+
+        // Register ModRecipes Registry
+        ModRecipes.register(modEventBus);
+
+        // Register ModEffects Registry
+        ModEffects.register(modEventBus);
+
+        // Register ModPotions Registry
+        ModPotions.register(modEventBus);
+
+
+        MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
 
     }
@@ -47,7 +80,7 @@ public class AlchemicalExpansion {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(final FMLClientSetupEvent event) {
-
+            MenuScreens.register(ModMenuTypes.MORTAR_AND_PESTLE_MENU.get(), MortarAndPestleScreen::new);
         }
     }
 

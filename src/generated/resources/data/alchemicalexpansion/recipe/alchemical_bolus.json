@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bone_meal"
+    },
+    "P": {
+      "tag": "alchemicalexpansion:alchemical_powders"
+    }
+  },
+  "pattern": [
+    " B ",
+    "BPB",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "alchemicalexpansion:alchemical_bolus"
+  }
+}

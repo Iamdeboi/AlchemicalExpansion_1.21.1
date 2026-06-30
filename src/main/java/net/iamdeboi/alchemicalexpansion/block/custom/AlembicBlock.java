@@ -5,6 +5,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -17,13 +18,12 @@ public class AlembicBlock extends Block {
 
     }
 
-    @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
-                                 Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+    public ItemInteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
+                                     Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         pLevel.playSound(pPlayer, pPos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS,
                 1f, 1f);
 
-        return InteractionResult.SUCCESS;
+        return ItemInteractionResult.sidedSuccess(pLevel.isClientSide());
 
     }
 

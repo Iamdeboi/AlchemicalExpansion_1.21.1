@@ -16,13 +16,11 @@ import java.util.UUID;
 
 public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS =
-            DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, AlchemicalExpansion.MODID);
+            DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, AlchemicalExpansion.MOD_ID);
 
 
     public static final RegistryObject<MobEffect> SPIDERS_CLIMB_EFFECT = MOB_EFFECTS.register("spiders_climb",
             () -> new SpidersClimbEffect(MobEffectCategory.NEUTRAL, 0xff3737));
-    public static final RegistryObject<MobEffect> FORTUNATE_EFFECT = MOB_EFFECTS.register("fortunate",
-            () -> new FortunateEffect(MobEffectCategory.BENEFICIAL, 0xFFD700));
 
 
 
