@@ -1,0 +1,11 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "minecraft:dandelion"
+    },
+  "output": {
+    "count": 3,
+    "id": "minecraft:yellow_dye"
+  }
+}

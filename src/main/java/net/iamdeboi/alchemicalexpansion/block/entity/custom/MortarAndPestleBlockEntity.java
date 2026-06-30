@@ -1,10 +1,11 @@
 package net.iamdeboi.alchemicalexpansion.block.entity.custom;
 
 import net.iamdeboi.alchemicalexpansion.block.entity.ModBlockEntities;
+import net.iamdeboi.alchemicalexpansion.item.ModItems;
 import net.iamdeboi.alchemicalexpansion.recipe.ModRecipes;
 import net.iamdeboi.alchemicalexpansion.recipe.MortarAndPestleGrindingRecipe;
 import net.iamdeboi.alchemicalexpansion.recipe.MortarAndPestleGrindingRecipeInput;
-import net.iamdeboi.alchemicalexpansion.screen.MortarAndPestleMenu;
+import net.iamdeboi.alchemicalexpansion.screen.custom.MortarAndPestleMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -19,6 +20,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
@@ -37,7 +39,7 @@ public class MortarAndPestleBlockEntity extends BlockEntity implements MenuProvi
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
-            if(!level.isClientSide) {
+            if(!level.isClientSide()) {
                 level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3 );
             }
         }
@@ -103,8 +105,8 @@ public class MortarAndPestleBlockEntity extends BlockEntity implements MenuProvi
     @Override
     protected void saveAdditional(CompoundTag pTag, HolderLookup.Provider pRegistries) {
         pTag.put("inventory", itemHandler.serializeNBT(pRegistries));
-        pTag.putInt("mortar_and_pestle_progress", progress);
-        pTag.putInt("mortar_and_pestle_max_progress", maxProgress);
+        pTag.putInt("mortar_and_pestle.progress", progress);
+        pTag.putInt("mortar_and_pestle.max_progress", maxProgress);
 
         super.saveAdditional(pTag, pRegistries);
     }
@@ -114,8 +116,8 @@ public class MortarAndPestleBlockEntity extends BlockEntity implements MenuProvi
         super.loadAdditional(pTag, pRegistries);
 
         itemHandler.deserializeNBT(pRegistries, pTag.getCompound("inventory"));
-        progress = pTag.getInt("mortar_and_pestle_progress");
-        maxProgress = pTag.getInt("mortar_and_pestle_max_progress");
+        progress = pTag.getInt("mortar_and_pestle.progress");
+        maxProgress = pTag.getInt("mortar_and_pestle.max_progress");
     }
 
     @Override

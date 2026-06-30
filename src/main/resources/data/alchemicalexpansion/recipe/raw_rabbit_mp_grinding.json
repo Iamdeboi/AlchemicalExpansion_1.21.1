@@ -1,0 +1,11 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "minecraft:rabbit"
+    },
+  "output": {
+    "count": 1,
+    "id": "alchemicalexpansion:fleshy_powder"
+  }
+}

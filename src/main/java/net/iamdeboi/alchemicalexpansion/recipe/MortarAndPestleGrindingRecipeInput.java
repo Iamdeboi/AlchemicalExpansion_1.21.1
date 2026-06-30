@@ -11,6 +11,6 @@ public record MortarAndPestleGrindingRecipeInput(ItemStack input) implements Rec
 
     @Override
     public int size() {
-        return 0;
+        return 1;
     }
 }

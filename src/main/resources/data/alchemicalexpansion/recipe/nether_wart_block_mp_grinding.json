@@ -1,0 +1,11 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "minecraft:nether_wart_block"
+    },
+  "output": {
+    "count": 9,
+    "id": "minecraft:nether_wart"
+  }
+}

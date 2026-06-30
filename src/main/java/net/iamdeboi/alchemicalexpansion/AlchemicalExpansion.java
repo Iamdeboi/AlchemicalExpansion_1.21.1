@@ -9,13 +9,15 @@ import net.iamdeboi.alchemicalexpansion.item.ModItems;
 import net.iamdeboi.alchemicalexpansion.potion.ModPotions;
 import net.iamdeboi.alchemicalexpansion.recipe.ModRecipes;
 import net.iamdeboi.alchemicalexpansion.screen.ModMenuTypes;
-import net.iamdeboi.alchemicalexpansion.screen.MortarAndPestleScreen;
+import net.iamdeboi.alchemicalexpansion.screen.custom.MortarAndPestleScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -33,6 +35,7 @@ public class AlchemicalExpansion {
     public AlchemicalExpansion() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
+        MinecraftForge.EVENT_BUS.register(this);
 
         //Register Creative Mode Tab for the mod
         ModCreativeModeTabs.register(modEventBus);
@@ -58,7 +61,7 @@ public class AlchemicalExpansion {
         ModPotions.register(modEventBus);
 
 
-        MinecraftForge.EVENT_BUS.register(this);
+
         modEventBus.addListener(this::addCreative);
 
     }
@@ -68,7 +71,10 @@ public class AlchemicalExpansion {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BELLADONNA_PLANT.getId(), ModBlocks.POTTED_BELLADONNA);
 
+        });
     }
 
     @SubscribeEvent

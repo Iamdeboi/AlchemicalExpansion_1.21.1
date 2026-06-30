@@ -1,0 +1,11 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "minecraft:ender_eye"
+    },
+  "output": {
+    "count": 1,
+    "id": "alchemicalexpansion:ender_powder"
+  }
+}

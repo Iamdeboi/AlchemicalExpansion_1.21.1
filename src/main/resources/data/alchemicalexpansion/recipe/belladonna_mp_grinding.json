@@ -1,0 +1,10 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "alchemicalexpansion:belladonna"
+    },
+  "output": {
+    "id": "alchemicalexpansion:botanical_powder"
+  }
+}

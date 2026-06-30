@@ -1,0 +1,11 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "minecraft:poppy"
+    },
+  "output": {
+    "count": 3,
+    "id": "minecraft:red_dye"
+  }
+}

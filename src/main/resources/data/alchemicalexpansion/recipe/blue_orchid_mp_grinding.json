@@ -1,0 +1,11 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "minecraft:blue_orchid"
+    },
+  "output": {
+    "count": 3,
+    "id": "minecraft:light_blue_dye"
+  }
+}

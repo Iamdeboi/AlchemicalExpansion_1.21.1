@@ -1,0 +1,11 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "minecraft:azalea"
+    },
+  "output": {
+    "count": 1,
+    "id": "alchemicalexpansion:botanical_powder"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "minecraft:allium"
+    },
+  "output": {
+    "id": "minecraft:magenta_dye",
+    "count": 3
+  }
+}

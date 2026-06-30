@@ -1,0 +1,10 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "minecraft:acacia_sapling"
+    },
+  "output": {
+    "id": "alchemicalexpansion:botanical_powder"
+  }
+}

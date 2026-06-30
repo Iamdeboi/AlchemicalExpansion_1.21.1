@@ -1,0 +1,11 @@
+{
+  "type": "alchemicalexpansion:mortar_and_pestle_grinding",
+  "ingredients":
+    {
+      "item": "minecraft:lily_of_the_valley"
+    },
+  "output": {
+    "count": 3,
+    "id": "minecraft:white_dye"
+  }
+}

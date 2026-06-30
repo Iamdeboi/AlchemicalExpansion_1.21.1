@@ -18,12 +18,12 @@ public class AlembicBlock extends Block {
 
     }
 
-    public ItemInteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
+    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
                                      Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        pLevel.playSound(pPlayer, pPos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS,
+        pLevel.playSound(pPlayer, pPos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS,
                 1f, 1f);
 
-        return ItemInteractionResult.sidedSuccess(pLevel.isClientSide());
+        return InteractionResult.sidedSuccess(pLevel.isClientSide);
 
     }
 

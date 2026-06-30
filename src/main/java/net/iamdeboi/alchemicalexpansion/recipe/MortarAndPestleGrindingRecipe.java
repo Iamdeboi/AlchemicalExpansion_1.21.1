@@ -21,7 +21,7 @@ public record MortarAndPestleGrindingRecipe(Ingredient inputItem, ItemStack outp
         return list;
     }
 
-    // read in JSON File --> turns into new GrowthChamberRecipe
+    // read in JSON File --> turns into new MortarAndPestleGrindingRecipe
 
     @Override
     public boolean matches(MortarAndPestleGrindingRecipeInput pInput, Level pLevel) {
@@ -32,7 +32,7 @@ public record MortarAndPestleGrindingRecipe(Ingredient inputItem, ItemStack outp
         return inputItem.test(pInput.getItem(0));
     }
 
-    // read in JSON File --> tunrns into new MortarAndPestleGrindingRecipe
+    // read in JSON File --> turns into new MortarAndPestleGrindingRecipe
 
     @Override
     public ItemStack assemble(MortarAndPestleGrindingRecipeInput pInput, HolderLookup.Provider pRegistries) {
@@ -61,8 +61,8 @@ public record MortarAndPestleGrindingRecipe(Ingredient inputItem, ItemStack outp
 
     public static class Serializer implements RecipeSerializer<MortarAndPestleGrindingRecipe> {
         public static final MapCodec<MortarAndPestleGrindingRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(MortarAndPestleGrindingRecipe::inputItem),
-                ItemStack.CODEC.fieldOf("result").forGetter(MortarAndPestleGrindingRecipe::output)
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredients").forGetter(MortarAndPestleGrindingRecipe::inputItem),
+                ItemStack.CODEC.fieldOf("output").forGetter(MortarAndPestleGrindingRecipe::output)
         ).apply(inst, MortarAndPestleGrindingRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, MortarAndPestleGrindingRecipe> STREAM_CODEC =

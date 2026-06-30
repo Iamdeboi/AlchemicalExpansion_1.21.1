@@ -14,8 +14,8 @@ public class ModBlockEntities {
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, AlchemicalExpansion.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<MortarAndPestleBlockEntity>> MORTAR_AND_PESTLE_BE =
-            BLOCK_ENTITIES.register("mortar_and_pestle_be", () ->
-                    BlockEntityType.Builder.of(MortarAndPestleBlockEntity::new, ModBlocks.MORTAR_AND_PESTLE_BLOCK.get()).build(null));
+            BLOCK_ENTITIES.register("mortar_and_pestle_be", () -> BlockEntityType.Builder.of(
+                    MortarAndPestleBlockEntity::new, ModBlocks.MORTAR_AND_PESTLE_BLOCK.get()).build(null));
 
 
 
