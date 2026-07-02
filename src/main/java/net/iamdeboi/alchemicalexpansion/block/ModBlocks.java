@@ -1,12 +1,8 @@
 package net.iamdeboi.alchemicalexpansion.block;
 
 import net.iamdeboi.alchemicalexpansion.AlchemicalExpansion;
-import net.iamdeboi.alchemicalexpansion.block.custom.AlembicBlock;
 import net.iamdeboi.alchemicalexpansion.block.custom.MortarAndPestleBlock;
 import net.iamdeboi.alchemicalexpansion.item.ModItems;
-import net.minecraft.client.resources.model.Material;
-import net.minecraft.client.resources.sounds.Sound;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -37,10 +33,6 @@ public class ModBlocks {
                             .noOcclusion()));
 
 
-
-    public static final RegistryObject<Block> ALEMBIC_BLOCK = registerBlock("alembic_block",
-            () -> new AlembicBlock(BlockBehaviour.Properties.of().strength(1.0F, 1.0F)
-                    .sound(SoundType.GLASS)));
     public static final RegistryObject<Block> MORTAR_AND_PESTLE_BLOCK = registerBlock("mortar_and_pestle_block",
             () -> new MortarAndPestleBlock(BlockBehaviour.Properties.of()
                     .noOcclusion().sound(SoundType.BONE_BLOCK)));

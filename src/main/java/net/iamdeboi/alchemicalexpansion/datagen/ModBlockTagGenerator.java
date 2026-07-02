@@ -37,15 +37,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         // Mineable with Tools Tags
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.MORTAR_AND_PESTLE_BLOCK.get());
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.ALEMBIC_BLOCK.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL);
         this.tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.BELLADONNA_PLANT.get());
 
         // Tool Strength Requirement Tags
-        this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.ALEMBIC_BLOCK.get());
+        this.tag(BlockTags.NEEDS_STONE_TOOL);
         this.tag(BlockTags.NEEDS_IRON_TOOL);
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL);

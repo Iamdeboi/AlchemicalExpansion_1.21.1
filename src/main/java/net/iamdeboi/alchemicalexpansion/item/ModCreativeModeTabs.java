@@ -33,7 +33,6 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.BELLADONNA_PLANT.get());
 
-                        pOutput.accept(ModBlocks.ALEMBIC_BLOCK.get());
                         pOutput.accept(ModBlocks.MORTAR_AND_PESTLE_BLOCK.get());
 
                     })
