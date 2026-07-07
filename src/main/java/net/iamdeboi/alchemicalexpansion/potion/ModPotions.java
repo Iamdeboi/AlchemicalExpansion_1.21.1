@@ -14,7 +14,7 @@ public class ModPotions {
     public static final DeferredRegister<Potion> POTIONS =
             DeferredRegister.create(ForgeRegistries.POTIONS, AlchemicalExpansion.MOD_ID);
 
-    // New Potion Bases:
+    // New Potion Bases (No Effects):
     public static final RegistryObject<Potion> SILKY_POTION = POTIONS.register("silky_potion",
             () -> new Potion());
     public static final RegistryObject<Potion> VISCOUS_POTION = POTIONS.register("viscous_potion",
@@ -34,9 +34,9 @@ public class ModPotions {
 
     // New Potion Recipes With New Effects:
     public static final RegistryObject<Potion> SPIDERS_CLIMB_POTION = POTIONS.register("spiders_climb_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.SPIDERS_CLIMB_EFFECT.getHolder().get(), 600, 0),
-                    (new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,100, 0, false, false, true))));
-
+            () -> new Potion(new MobEffectInstance(ModEffects.SPIDERS_CLIMB_EFFECT.getHolder().get(), 600, 0)));
+    public static final RegistryObject<Potion> FORTUNATE_POTION = POTIONS.register("fortunate_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.FORTUNATE_EFFECT.getHolder().get(), 2400, 0)));
 
     public static void register(IEventBus modEventBus) {
         POTIONS.register(modEventBus);

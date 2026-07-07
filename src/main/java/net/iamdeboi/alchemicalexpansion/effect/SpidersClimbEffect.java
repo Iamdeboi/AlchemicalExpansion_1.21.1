@@ -14,11 +14,11 @@ public class SpidersClimbEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-
         // Climbing Effect which activates when in horizontal contact with a surface (wall climbing!)
+        // Each potion level DOUBLES the velocity of climbing
         if (pLivingEntity.horizontalCollision) {
             Vec3 initialVec = pLivingEntity.getDeltaMovement();
-            Vec3 climbVec = new Vec3(initialVec.x, 0.2D, initialVec.z);
+            Vec3 climbVec = new Vec3(initialVec.x, 0.2D*pAmplifier, initialVec.z);
             pLivingEntity.setDeltaMovement(climbVec.scale(0.97D));
             return true;
         }
