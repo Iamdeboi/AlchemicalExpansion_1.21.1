@@ -34,9 +34,9 @@ public class ModPotions {
 
     // New Potion Recipes With New Effects:
     public static final RegistryObject<Potion> SPIDERS_CLIMB_POTION = POTIONS.register("spiders_climb_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.SPIDERS_CLIMB_EFFECT.getHolder().get(), 600, 0)));
+            () -> new Potion(new MobEffectInstance(ModEffects.SPIDERS_CLIMB_EFFECT.getHolder().get(), 2400, 0)));
     public static final RegistryObject<Potion> FORTUNATE_POTION = POTIONS.register("fortunate_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.FORTUNATE_EFFECT.getHolder().get(), 2400, 0)));
+            () -> new Potion(new MobEffectInstance(ModEffects.FORTUNATE_EFFECT.getHolder().get(), 600, 0)));
 
     public static void register(IEventBus modEventBus) {
         POTIONS.register(modEventBus);

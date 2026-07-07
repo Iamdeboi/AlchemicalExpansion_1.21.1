@@ -1,27 +1,27 @@
-[07Jul2026 13:02:30.901] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\dylan\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, alchemicalexpansion, --all, --output, C:\Users\dylan\Desktop\Minecraft Modding Projects\AlchemicalExpansion_1.21.1\src\generated\resources, --existing, C:\Users\dylan\Desktop\Minecraft Modding Projects\AlchemicalExpansion_1.21.1\src\main\resources]
-[07Jul2026 13:02:30.903] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.11+10-LTS
-[07Jul2026 13:02:30.905] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.11 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[07Jul2026 13:02:30.999] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[07Jul2026 13:02:31.096] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/dylan/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[07Jul2026 13:02:31.866] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[07Jul2026 13:02:32.755] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\dylan\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, alchemicalexpansion, --all, --output, C:\Users\dylan\Desktop\Minecraft Modding Projects\AlchemicalExpansion_1.21.1\src\generated\resources, --existing, C:\Users\dylan\Desktop\Minecraft Modding Projects\AlchemicalExpansion_1.21.1\src\main\resources]
-[07Jul2026 13:02:37.381] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
-[07Jul2026 13:02:37.381] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
-[07Jul2026 13:02:37.415] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[07Jul2026 13:02:37.829] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [alchemicalexpansion]
-[07Jul2026 13:02:37.897] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/dylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[07Jul2026 13:02:37.898] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/dylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
-[07Jul2026 13:02:38.012] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[07Jul2026 13:02:38.146] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 133 ms
-[07Jul2026 13:02:38.146] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[07Jul2026 13:02:38.155] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 8 ms
-[07Jul2026 13:02:38.155] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: alchemicalexpansion
-[07Jul2026 13:02:38.213] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: alchemicalexpansion finished after 58 ms
-[07Jul2026 13:02:38.213] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: alchemicalexpansion
-[07Jul2026 13:02:38.215] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: alchemicalexpansion finished after 1 ms
-[07Jul2026 13:02:38.215] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id alchemicalexpansion
-[07Jul2026 13:02:38.220] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id alchemicalexpansion finished after 5 ms
-[07Jul2026 13:02:38.220] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id alchemicalexpansion
-[07Jul2026 13:02:38.221] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id alchemicalexpansion finished after 0 ms
-[07Jul2026 13:02:38.221] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 210 ms
-[07Jul2026 13:02:38.224] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 38, old count: 39, new count: 39, removed stale: 0, written: 0
+[07Jul2026 13:40:38.653] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\dylan\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, alchemicalexpansion, --all, --output, C:\Users\dylan\Desktop\Minecraft Modding Projects\AlchemicalExpansion_1.21.1\src\generated\resources, --existing, C:\Users\dylan\Desktop\Minecraft Modding Projects\AlchemicalExpansion_1.21.1\src\main\resources]
+[07Jul2026 13:40:38.656] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.11+10-LTS
+[07Jul2026 13:40:38.657] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.11 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[07Jul2026 13:40:38.767] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[07Jul2026 13:40:38.854] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/dylan/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[07Jul2026 13:40:39.616] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[07Jul2026 13:40:40.388] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\dylan\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, alchemicalexpansion, --all, --output, C:\Users\dylan\Desktop\Minecraft Modding Projects\AlchemicalExpansion_1.21.1\src\generated\resources, --existing, C:\Users\dylan\Desktop\Minecraft Modding Projects\AlchemicalExpansion_1.21.1\src\main\resources]
+[07Jul2026 13:40:44.949] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[07Jul2026 13:40:44.949] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[07Jul2026 13:40:44.981] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[07Jul2026 13:40:45.424] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [alchemicalexpansion]
+[07Jul2026 13:40:45.495] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/dylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[07Jul2026 13:40:45.496] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/dylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[07Jul2026 13:40:45.627] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[07Jul2026 13:40:45.786] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 157 ms
+[07Jul2026 13:40:45.786] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[07Jul2026 13:40:45.798] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 10 ms
+[07Jul2026 13:40:45.798] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: alchemicalexpansion
+[07Jul2026 13:40:45.858] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: alchemicalexpansion finished after 59 ms
+[07Jul2026 13:40:45.858] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: alchemicalexpansion
+[07Jul2026 13:40:45.859] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: alchemicalexpansion finished after 1 ms
+[07Jul2026 13:40:45.859] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id alchemicalexpansion
+[07Jul2026 13:40:45.866] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id alchemicalexpansion finished after 6 ms
+[07Jul2026 13:40:45.866] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id alchemicalexpansion
+[07Jul2026 13:40:45.867] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id alchemicalexpansion finished after 0 ms
+[07Jul2026 13:40:45.867] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 240 ms
+[07Jul2026 13:40:45.872] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 38, old count: 39, new count: 39, removed stale: 0, written: 0

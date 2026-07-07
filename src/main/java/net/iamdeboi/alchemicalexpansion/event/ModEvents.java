@@ -24,11 +24,6 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = AlchemicalExpansion.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
 
-    private static final List<String> ORES = Arrays.asList(
-            "minecraft:coal_ore", "minecraft:copper_ore", "minecraft:iron_ore", "minecraft:gold_ore", "minecraft:diamond_ore",
-            "minecraft:emerald_ore", "minecraft:lapis_ore", "minecraft:redstone_ore"
-    );
-
     @SubscribeEvent
     public static void onBrewingRecipeRegister(BrewingRecipeRegisterEvent event) {
         PotionBrewing.Builder builder = event.getBuilder();
@@ -43,7 +38,7 @@ public class ModEvents {
         builder.addMix(Potions.WATER, ModItems.ENDER_POWDER.get(), ModPotions.UNSTABLE_POTION.getHolder().get());
 
         // Spider's Climb:
-        builder.addMix(ModPotions.SILKY_POTION.getHolder().get(), ModItems.ARTHROPOD_POWDER.get(), ModPotions.SPIDERS_CLIMB_POTION.getHolder().get());
+        builder.addMix(ModPotions.SILKY_POTION.getHolder().get(), Items.COBWEB, ModPotions.SPIDERS_CLIMB_POTION.getHolder().get());
         builder.addMix(ModPotions.SPARKLING_POTION.getHolder().get(), Items.DIAMOND, ModPotions.FORTUNATE_POTION.getHolder().get());
     }
 
@@ -52,6 +47,7 @@ public class ModEvents {
         BlockState state = event.getState();
         Block block = state.getBlock();
         if(!event.getLevel().isClientSide()){
+            // Fortunate Effect: Replace block broken with a golden ingot
             if (event.getPlayer().hasEffect(ModEffects.FORTUNATE_EFFECT.getHolder().get())) {
                 event.setCanceled(true);
                 event.getLevel().removeBlock(event.getPos(), false);

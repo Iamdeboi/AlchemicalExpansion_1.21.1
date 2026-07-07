@@ -23,7 +23,7 @@ public class ModEffects {
     public static final RegistryObject<MobEffect> SPIDERS_CLIMB_EFFECT = MOB_EFFECTS.register("spiders_climb",
             () -> new SpidersClimbEffect(MobEffectCategory.NEUTRAL, 0xff3737));
     public static final RegistryObject<MobEffect> FORTUNATE_EFFECT = MOB_EFFECTS.register("fortunate",
-            () -> new FortunateEffect(MobEffectCategory.BENEFICIAL, 0x55FFFF));
+            () -> new FortunateEffect(MobEffectCategory.NEUTRAL, 0x55FFFF));
 
 
 
