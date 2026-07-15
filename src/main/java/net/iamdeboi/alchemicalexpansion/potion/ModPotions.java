@@ -35,8 +35,12 @@ public class ModPotions {
     // New Potion Recipes With New Effects:
     public static final RegistryObject<Potion> SPIDERS_CLIMB_POTION = POTIONS.register("spiders_climb_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.SPIDERS_CLIMB_EFFECT.getHolder().get(), 2400, 0)));
-    public static final RegistryObject<Potion> FORTUNATE_POTION = POTIONS.register("fortunate_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.FORTUNATE_EFFECT.getHolder().get(), 600, 0)));
+    public static final RegistryObject<Potion> GOLDEN_TOUCH_POTION = POTIONS.register("golden_touch_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.GOLDEN_TOUCH_EFFECT.getHolder().get(), 600, 0)));
+
+    // Upscaled Vanilla Effect Potions:
+    public static final RegistryObject<Potion> ADVANCED_POISON = POTIONS.register("advanced_poison_potion",
+            () -> new Potion(new MobEffectInstance(MobEffects.POISON, 200, 2)));
 
     public static void register(IEventBus modEventBus) {
         POTIONS.register(modEventBus);

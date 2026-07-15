@@ -35,17 +35,21 @@
   "item.minecraft.splash_potion.effect.unstable_potion": "Unstable Splash Potion",
   "item.minecraft.lingering_potion.effect.unstable_potion": "Unstable Lingering Potion",
 
-  "item.minecraft.potion.effect.spiders_climb_potion": "Spider's Climb Potion",
-  "item.minecraft.splash_potion.effect.spiders_climb_potion": "Spider's Climb Splash Potion",
-  "item.minecraft.lingering_potion.effect.spiders_climb_potion": "Spider's Climb Lingering Potion",
-  "item.minecraft.potion.effect.fortunate_potion": "Fortunate Potion",
-  "item.minecraft.splash_potion.effect.fortunate_potion_potion": "Fortunate Splash Potion",
-  "item.minecraft.lingering_potion.effect.fortunate_potion_potion": "Fortunate Lingering Potion",
+  "item.minecraft.potion.effect.spiders_climb_potion": "Potion of Spider's Climb",
+  "item.minecraft.splash_potion.effect.spiders_climb_potion": "Splash Potion of Spider's Climb",
+  "item.minecraft.lingering_potion.effect.spiders_climb_potion": "Lingering Potion of Spider's Climb",
+  "item.minecraft.potion.effect.golden_touch_potion": "Potion of Golden Touch",
+  "item.minecraft.splash_potion.effect.golden_touch_potion": "Splash Potion of Golden Touch",
+  "item.minecraft.lingering_potion.effect.golden_touch_potion": "Lingering Potion of Golden Touch",
+
+  "item.minecraft.potion.effect.advanced_poison_potion": "Refined Potion of Poison",
+  "item.minecraft.splash_potion.effect.advanced_poison_potion": "Refined Splash Potion of Poison",
+  "item.minecraft.lingering_potion.effect.advanced_poison_potion": "Refined Lingering Potion of Poison",
 
   "block.alchemicalexpansion.mortar_and_pestle_block": "Mortar and Pestle",
 
   "effect.alchemicalexpansion.spiders_climb": "Spider's Climb",
-  "effect.alchemicalexpansion.fortunate": "Fortunate",
+  "effect.alchemicalexpansion.golden_touch": "Golden Touch",
 
   "creativetab.alchemical_expansion_tab": "Alchemical Expansion"
 }
