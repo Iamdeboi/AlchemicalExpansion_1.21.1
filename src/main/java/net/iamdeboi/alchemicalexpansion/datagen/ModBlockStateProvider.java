@@ -18,11 +18,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        simpleBlockWithItem(ModBlocks.BELLADONNA_PLANT.get(), models().cross(blockTexture(ModBlocks.BELLADONNA_PLANT.get()).getPath(),
-                blockTexture(ModBlocks.BELLADONNA_PLANT.get())).renderType("cutout"));
+        //simpleBlockWithItem(ModBlocks.BELLADONNA_PLANT.get(), models().cross(blockTexture(ModBlocks.BELLADONNA_PLANT.get()).getPath(),
+                //blockTexture(ModBlocks.BELLADONNA_PLANT.get())).renderType("cutout"));
 
-        simpleBlockWithItem(ModBlocks.POTTED_BELLADONNA.get(), models().singleTexture("potted_belladonna_plant", ResourceLocation.tryParse("flower_pot_cross"), "plant",
-                blockTexture(ModBlocks.BELLADONNA_PLANT.get())).renderType("cutout"));
+        //simpleBlockWithItem(ModBlocks.POTTED_BELLADONNA.get(), models().singleTexture("potted_belladonna_plant", ResourceLocation.tryParse("flower_pot_cross"), "plant",
+                //blockTexture(ModBlocks.BELLADONNA_PLANT.get())).renderType("cutout"));
 
         simpleBlockWithItem(ModBlocks.MORTAR_AND_PESTLE_BLOCK.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/mortar_and_pestle_block")));

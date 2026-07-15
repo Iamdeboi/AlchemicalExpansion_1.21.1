@@ -13,10 +13,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> ALCHEMICAL_BOLUS = ITEMS.register("alchemical_bolus",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ESSENCE_CONTAINER = ITEMS.register("essence_container",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BELLADONNA = ITEMS.register("belladonna",
-            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> AQUATIC_POWDER = ITEMS.register("aquatic_powder",
             () -> new Item(new Item.Properties()));

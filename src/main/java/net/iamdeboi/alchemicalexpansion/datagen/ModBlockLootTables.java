@@ -26,12 +26,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        this.dropSelf(ModBlocks.BELLADONNA_PLANT.get());
         this.dropSelf(ModBlocks.MORTAR_AND_PESTLE_BLOCK.get());
-
-        this.add(ModBlocks.POTTED_BELLADONNA.get(), createPotFlowerItemTable(ModBlocks.BELLADONNA_PLANT.get()));
-
-
 
         // EXAMPLE ORE BLOCK //
         //this.add(ModBlocks.SAPPHIRE_ORE.get(),

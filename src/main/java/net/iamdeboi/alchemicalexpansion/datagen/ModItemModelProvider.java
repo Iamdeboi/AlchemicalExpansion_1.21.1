@@ -21,8 +21,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.ALCHEMICAL_BOLUS.get());
-        basicItem(ModItems.BELLADONNA.get());
-        basicItem(ModItems.ESSENCE_CONTAINER.get());
 
         basicItem(ModItems.AQUATIC_POWDER.get());
         basicItem(ModItems.ARTHROPOD_POWDER.get());
@@ -33,7 +31,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.NETHERBOUND_POWDER.get());
         basicItem(ModItems.SPORE_POWDER.get());
 
-        simpleBlockItemBlockTexture(ModBlocks.BELLADONNA_PLANT);
+        //simpleBlockItemBlockTexture(ModBlocks.BELLADONNA_PLANT);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

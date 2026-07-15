@@ -15,13 +15,10 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AlchemicalExpansion.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> ALCHEMICAL_EXPANSION_TAB = CREATIVE_MODE_TABS.register("alchemical_expansion_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ESSENCE_CONTAINER.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALCHEMICAL_BOLUS.get()))
                     .title(Component.translatable("creativetab.alchemical_expansion_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.ALCHEMICAL_BOLUS.get());
-                        pOutput.accept(ModItems.ESSENCE_CONTAINER.get());
-                        pOutput.accept(ModItems.BELLADONNA.get());
-
                         pOutput.accept(ModItems.AQUATIC_POWDER.get());
                         pOutput.accept(ModItems.ARTHROPOD_POWDER.get());
                         pOutput.accept(ModItems.BOTANICAL_POWDER.get());
@@ -30,8 +27,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.GLITTERING_POWDER.get());
                         pOutput.accept(ModItems.NETHERBOUND_POWDER.get());
                         pOutput.accept(ModItems.SPORE_POWDER.get());
-
-                        pOutput.accept(ModBlocks.BELLADONNA_PLANT.get());
 
                         pOutput.accept(ModBlocks.MORTAR_AND_PESTLE_BLOCK.get());
 

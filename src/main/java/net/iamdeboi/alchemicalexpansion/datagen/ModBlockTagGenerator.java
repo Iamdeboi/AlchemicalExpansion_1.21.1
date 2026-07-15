@@ -26,10 +26,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         // Blocks
-        this.tag(ModTags.Blocks.HERBALISM_ELIGIBLE_PLANTS)
-                .add(ModBlocks.BELLADONNA_PLANT.get())
-                    .addTag(BlockTags.FLOWERS)
-                    .addTag(BlockTags.SWORD_EFFICIENT);
+        //this.tag(ModTags.Blocks.HERBALISM_ELIGIBLE_PLANTS)
+                //.add(ModBlocks.BELLADONNA_PLANT.get())
+                    //.addTag(BlockTags.FLOWERS)
+                    //.addTag(BlockTags.SWORD_EFFICIENT);
 
         // Items
         //this.tag(ModTags.Items.ALCHEMICAL_INGREDIENTS);
@@ -39,8 +39,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.MORTAR_AND_PESTLE_BLOCK.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL);
-        this.tag(BlockTags.MINEABLE_WITH_HOE)
-                .add(ModBlocks.BELLADONNA_PLANT.get());
+        this.tag(BlockTags.MINEABLE_WITH_HOE);
 
         // Tool Strength Requirement Tags
         this.tag(BlockTags.NEEDS_STONE_TOOL);

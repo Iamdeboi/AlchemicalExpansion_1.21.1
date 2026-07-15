@@ -23,14 +23,14 @@ public class ModBlocks {
     // You can override the preset properties simply by using ".propertyhere"
     // Example: .sound(SoundType.AMETHYST))); overrides the sounds of the block to be that of Amethyst blocks
 
-    public static final RegistryObject<Block> BELLADONNA_PLANT = registerBlock("belladonna_plant",
-            () -> new FlowerBlock(MobEffects.POISON, 5,
-    BlockBehaviour.Properties.of()
-            .noOcclusion().noCollission()));
-    public static final RegistryObject<Block> POTTED_BELLADONNA = BLOCKS.register("potted_belladonna_plant",
-            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.BELLADONNA_PLANT,
-                    BlockBehaviour.Properties.of()
-                            .noOcclusion()));
+    //public static final RegistryObject<Block> BELLADONNA_PLANT = registerBlock("belladonna_plant",
+           // () -> new FlowerBlock(MobEffects.POISON, 5,
+    //BlockBehaviour.Properties.of()
+            //.noOcclusion().noCollission()));
+    //public static final RegistryObject<Block> POTTED_BELLADONNA = BLOCKS.register("potted_belladonna_plant",
+           // () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.BELLADONNA_PLANT,
+                    //BlockBehaviour.Properties.of()
+                            //.noOcclusion()));
 
 
     public static final RegistryObject<Block> MORTAR_AND_PESTLE_BLOCK = registerBlock("mortar_and_pestle_block",

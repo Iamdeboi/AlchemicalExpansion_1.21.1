@@ -1,7 +1,5 @@
 {
   "item.alchemicalexpansion.alchemical_bolus": "Alchemical Bolus",
-  "item.alchemicalexpansion.essence_container": "Essence Container",
-  "item.alchemicalexpansion.belladonna": "Belladonna",
 
   "item.alchemicalexpansion.aquatic_powder": "Aquatic Powder",
   "item.alchemicalexpansion.arthropod_powder": "Arthropod Powder",
@@ -44,8 +42,6 @@
   "item.minecraft.splash_potion.effect.fortunate_potion_potion": "Fortunate Splash Potion",
   "item.minecraft.lingering_potion.effect.fortunate_potion_potion": "Fortunate Lingering Potion",
 
-  "block.alchemicalexpansion.belladonna_plant": "Belladonna Plant",
-  "block.alchemicalexpansion.alembic_block": "Alembic",
   "block.alchemicalexpansion.mortar_and_pestle_block": "Mortar and Pestle",
 
   "effect.alchemicalexpansion.spiders_climb": "Spider's Climb",

@@ -30,12 +30,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ESSENCE_CONTAINER.get(), 3)
-                .pattern("G G")
-                .pattern("GGG")
-                .define('G', Tags.Items.GLASS)
-                .unlockedBy(getHasName(Items.GLASS), has(Items.GLASS)).save(pRecipeOutput);
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MORTAR_AND_PESTLE_BLOCK.get())
                 .requires(Items.STICK)
                 .requires(Items.BOWL)

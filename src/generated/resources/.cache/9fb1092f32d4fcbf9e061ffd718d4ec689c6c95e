@@ -1,7 +1,5 @@
-// 1.21	2026-06-29T21:04:16.1794538	Recipes
+// 1.21	2026-07-14T13:43:23.5574856	Recipes
 9a886c66e0b72b5189653e49c29f8eb5f49e3004 data/alchemicalexpansion/advancement/recipes/misc/alchemical_bolus.json
-e80a81da97fe154b7f5b1204565496bc6a0876f6 data/alchemicalexpansion/advancement/recipes/misc/essence_container.json
 5eb42118563d270504de8766101570fe7444af9c data/alchemicalexpansion/advancement/recipes/misc/mortar_and_pestle_block.json
 2f0cb48e5064d9647c46ffeabc6caf369b24e57a data/alchemicalexpansion/recipe/alchemical_bolus.json
-fa34df266c650d406b6909980d088ccac17a5e45 data/alchemicalexpansion/recipe/essence_container.json
 f26c21d84ed9dba1da5ce324129144a647f93728 data/alchemicalexpansion/recipe/mortar_and_pestle_block.json
