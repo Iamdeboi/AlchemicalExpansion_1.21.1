@@ -40,9 +40,30 @@ public class ModEvents {
         // Custom Effect Potions:
         builder.addMix(ModPotions.SILKY_POTION.getHolder().get(), Items.COBWEB, ModPotions.SPIDERS_CLIMB_POTION.getHolder().get());
         builder.addMix(ModPotions.SPARKLING_POTION.getHolder().get(), Items.GOLDEN_APPLE, ModPotions.GOLDEN_TOUCH_POTION.getHolder().get());
+        builder.addMix(ModPotions.SPARKLING_POTION.getHolder().get(), Items.IRON_AXE, ModPotions.HEROS_DISCOUNT_POTION.getHolder().get());
+        builder.addMix(ModPotions.HEROS_DISCOUNT_POTION.getHolder().get(), Items.CROSSBOW, ModPotions.HEROS_DISCOUNT_POTION_T2.getHolder().get());
+        builder.addMix(ModPotions.HEROS_DISCOUNT_POTION_T2.getHolder().get(), Items.EMERALD, ModPotions.HEROS_DISCOUNT_POTION_T3.getHolder().get());
+        builder.addMix(ModPotions.HEROS_DISCOUNT_POTION_T3.getHolder().get(), Items.EMERALD_BLOCK, ModPotions.HEROS_DISCOUNT_POTION_T4.getHolder().get());
+        builder.addMix(ModPotions.HEROS_DISCOUNT_POTION_T4.getHolder().get(), Items.TOTEM_OF_UNDYING, ModPotions.HEROS_DISCOUNT_POTION_T5.getHolder().get());
 
         //Upscaled Vanilla Effect Potions:
-        builder.addMix(ModPotions.SILKY_POTION.getHolder().get(), Items.PUFFERFISH, ModPotions.ADVANCED_POISON.getHolder().get());
+        // Silky Potion Base:
+        builder.addMix(ModPotions.SILKY_POTION.getHolder().get(), Items.PUFFERFISH, ModPotions.REFINED_POISON.getHolder().get());
+        builder.addMix(ModPotions.SILKY_POTION.getHolder().get(), Items.FERMENTED_SPIDER_EYE, ModPotions.REFINED_WEAKNESS.getHolder().get());
+        // Viscous Potion Base:
+        builder.addMix(ModPotions.VISCOUS_POTION.getHolder().get(), Items.MELON, ModPotions.REFINED_INSTANT_HEALTH.getHolder().get());
+        builder.addMix(ModPotions.VISCOUS_POTION.getHolder().get(), ModItems.ARTHROPOD_POWDER.get(), ModPotions.REFINED_INSTANT_DAMAGE.getHolder().get());
+        builder.addMix(ModPotions.VISCOUS_POTION.getHolder().get(), Items.ROTTEN_FLESH, ModPotions.CEASELESS_HUNGER.getHolder().get());
+        // Bubbly Potion Base:
+        builder.addMix(ModPotions.BUBBLY_POTION.getHolder().get(), Items.CONDUIT, ModPotions.LIQUID_CONDUIT.getHolder().get());
+        // Earthy Potion Base:
+        // Mushroomy Potion Base:
+        builder.addMix(ModPotions.MUSHROOMY_POTION.getHolder().get(), Items.CARROT, ModPotions.HEARTY_MEAL.getHolder().get());
+        builder.addMix(ModPotions.HEARTY_MEAL.getHolder().get(), Items.BAKED_POTATO, ModPotions.HEARTY_MEAL_T2.getHolder().get());
+        builder.addMix(ModPotions.HEARTY_MEAL_T2.getHolder().get(), Items.PUMPKIN_PIE, ModPotions.HEARTY_MEAL_T3.getHolder().get());
+        // Glittering Powder Base:
+        // Netherbound Powder Base:
+        // Ender Powder Base:
     }
 
     @SubscribeEvent
