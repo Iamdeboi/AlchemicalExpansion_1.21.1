@@ -46,7 +46,6 @@ public class ModPotions {
     public static final RegistryObject<Potion> GOLDEN_TOUCH_POTION = POTIONS.register("golden_touch_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.GOLDEN_TOUCH_EFFECT.getHolder().get(), 600, 0)));
 
-
     // Upscaled Vanilla Effect Potions:
 
     // Silky Potion Base:
@@ -68,7 +67,7 @@ public class ModPotions {
     public static final RegistryObject<Potion> REFINED_SPEED = POTIONS.register("refined_speed_potion",
             () -> new Potion(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3300, 2)));
     public static final RegistryObject<Potion> DECAY_POTION = POTIONS.register("decay_potion",
-            () -> new Potion(new MobEffectInstance(MobEffects.WITHER, 200, 2)));
+            () -> new Potion(new MobEffectInstance(MobEffects.WITHER, 400, 0)));
 
     // Bubbly Potion Base:
     public static final RegistryObject<Potion> LIQUID_CONDUIT = POTIONS.register("liquid_conduit_potion",
