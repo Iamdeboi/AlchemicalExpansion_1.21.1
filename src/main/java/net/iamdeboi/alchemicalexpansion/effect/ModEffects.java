@@ -14,7 +14,7 @@ public class ModEffects {
 
     // Custom Potion Effects
     public static final RegistryObject<MobEffect> SPIDERS_CLIMB_EFFECT = MOB_EFFECTS.register("spiders_climb",
-            () -> new SpidersClimbEffect(MobEffectCategory.NEUTRAL, 0xff3737));
+            () -> new SpidersClimbEffect(MobEffectCategory.BENEFICIAL, 0xff3737));
     public static final RegistryObject<MobEffect> GOLDEN_TOUCH_EFFECT = MOB_EFFECTS.register("golden_touch",
             () -> new GoldenTouchEffect(MobEffectCategory.NEUTRAL, 0xcfb53b));
 
