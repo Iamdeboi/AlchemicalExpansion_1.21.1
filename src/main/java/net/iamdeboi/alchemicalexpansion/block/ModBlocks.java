@@ -35,7 +35,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MORTAR_AND_PESTLE_BLOCK = registerBlock("mortar_and_pestle_block",
             () -> new MortarAndPestleBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion().sound(SoundType.BONE_BLOCK)));
+                    .noOcclusion()
+                    .strength(1.0F)
+                    .sound(SoundType.BONE_BLOCK)));
 
 
 
