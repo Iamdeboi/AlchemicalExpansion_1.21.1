@@ -72,8 +72,8 @@ public class ModPotions {
     // Bubbly Potion Base:
     public static final RegistryObject<Potion> LIQUID_CONDUIT = POTIONS.register("liquid_conduit_potion",
             () -> new Potion(
-                    (new MobEffectInstance(MobEffects.CONDUIT_POWER, 1800, 2)),
-                    (new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 1800, 1))));
+                    (new MobEffectInstance(MobEffects.CONDUIT_POWER, 3600, 2)),
+                    (new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 3600, 1))));
 
     // Earthy Potion Base:
     public static final RegistryObject<Potion> ABSORPTION_POTION = POTIONS.register("absorption_potion",
@@ -132,7 +132,7 @@ public class ModPotions {
 
     // Spicy Potion Base:
     public static final RegistryObject<Potion> REFINED_REGENERATION = POTIONS.register("refined_regeneration",
-            () -> new Potion(new MobEffectInstance(MobEffects.REGENERATION, 1350, 2)));
+            () -> new Potion(new MobEffectInstance(MobEffects.REGENERATION, 1600, 2)));
     public static final RegistryObject<Potion> REFINED_STRENGTH = POTIONS.register("refined_strength",
             () -> new Potion(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 6600, 2)));
     public static final RegistryObject<Potion> REFINED_FIRE_RESISTANCE = POTIONS.register("refined_fire_resistance",
